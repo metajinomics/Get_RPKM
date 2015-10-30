@@ -10,6 +10,7 @@ bash idxstatsWorkFlow.sh
 ```
 
 To normalize by RPKM,
-
+```
 g++ Get_RPKM.cpp -o Get_RPKM
 ./Get_RPKM counts.txt normal_counts.txt
+```
