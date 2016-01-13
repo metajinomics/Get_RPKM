@@ -1,0 +1,5 @@
+genID	length	Desc.	sample1	sample2	sample3
+geneA	2000	geneA	10	12	30
+geneB	4000	geneB	20	25	60
+geneC	1000	geneC	5	8	15
+geneD	10000	geneD	0	0	1

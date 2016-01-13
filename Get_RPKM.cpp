@@ -98,6 +98,7 @@ cout<<Ddata[3235][i]<<endl<<flush;
 
   //cout<<Ddata[0][0]<<endl<<flush;
   string ss;
+  
   for (int i=0;i<data[0].size();i++){
     myfile << data[0][i] + "\t";
   }
@@ -160,7 +161,7 @@ int fileToDataTap (string filenameDIR,vector <vector <string> > &data){
       while (ss)
 	{
 	  string s1;
-	  if(!getline(ss,s1,'')) break;
+	  if(!getline(ss,s1,'\t')) break;
 	  if(s1!=""){
 	    record.push_back(s1);
 	  }
