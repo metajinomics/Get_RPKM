@@ -12,5 +12,16 @@ bash idxstatsWorkFlow.sh
 To normalize by RPKM,
 ```
 g++ Get_RPKM.cpp -o Get_RPKM
-./Get_RPKM counts.txt normal_counts.txt
+./Get_RPKM RPKMexample.txt test_output.txt
 ```
+
+For the downstream from IMG
+~~~
+g++ Get_RPKM_for_IMG.cpp -o Get_RPKM_for_IMG
+./Get_RPKM_for_IMG rnaseq_expression.txt imgout.txt
+~~~
+For the downstram from standard assembly count table
+~~~
+g++ Get_RPKM_for_assembly.cpp -o Get_RPKM_for_assembly 
+./Get_RPKM_for_assembly counts.txt normal_counts.txt
+~~~
