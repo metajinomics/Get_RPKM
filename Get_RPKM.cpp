@@ -46,9 +46,7 @@ int main(int argc, char *argv[])
     length.push_back(atof(data[i][1].c_str()));
   }
 
-  //for(int i=0;i<length.size();i++){
-  //cout<<length[i]<<endl<<flush;
-  //}
+
 
   //get total
   vector <double> sum;
@@ -59,11 +57,7 @@ int main(int argc, char *argv[])
     }
     sum.push_back(total);
   }
-  //cout<<sum.size()<<endl<<flush;
-  //cout<<Ddata[0].size()<<endl<<flush;
-  //18
-  //cout<<Ddata.size()<<endl<<flush;
-  //3236
+
   for (int i=0;i<Ddata.size();i++){
     for (int j=0;j<Ddata[i].size();j++){
       //step 1: multiply 10^9
@@ -78,25 +72,15 @@ int main(int argc, char *argv[])
       double divl = length[i];
       if(divl==0){divl=1;}
       Ddata[i][j] = Ddata[i][j]/divl;
-      //cout<<Ddata[i][j]<<endl<<flush;
-      //cout<<Ddata[i].size()<<endl<<flush;
+ 
     }
   }
-  /*
-    cout<<endl<<flush;
-for(int i=0;i<Ddata[3234].size();i++){
-cout<<Ddata[3234][i]<<endl<<flush;
-}
-cout<<endl<<flush;
-for(int i=0;i<Ddata[3235].size();i++){
-cout<<Ddata[3235][i]<<endl<<flush;
-}
-  */
+
   //file for result
   ofstream myfile;
   myfile.open (argv[2]);
 
-  //cout<<Ddata[0][0]<<endl<<flush;
+  
   string ss;
   
   for (int i=0;i<data[0].size();i++){
@@ -114,22 +98,7 @@ cout<<Ddata[3235][i]<<endl<<flush;
     }
     myfile << "\n";
   }
-  /*
-//double into string
-for (int i=1;i<data.size();i++){
-for (int j=3;j<data[i].size();j++){
-data[i][j]=to_string(Ddata[i-1][j-3]);
-}
-}
 
-//write file
-for (int i=0;i<data.size();i++){
-for (int j=0;j<data[i].size();j++){
-myfile << data[i][j] + "\t" ;
-}
-myfile << "\n";
-}
-  */
 
   cout<<"done"<<endl<<flush;
   return 0;
